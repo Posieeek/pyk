@@ -1,0 +1,30 @@
+{
+  "name": "maciej-zawadzki",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "final-form": "^4.6.1",
+    "node-sass-chokidar": "^1.2.2",
+    "npm-run-all": "^4.1.2",
+    "react": "^16.2.0",
+    "react-avatar": "^2.5.1",
+    "react-dom": "^16.2.0",
+    "react-final-form": "^3.4.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.1",
+    "react-user-avatar": "^1.10.0",
+    "reactstrap": "^6.0.1",
+    "state-component": "^1.0.2",
+    "styled-components": "^3.2.6"
+  },
+  "scripts": {
+    "build-scss": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-scss": "npm run build-scss && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-scss start-js",
+    "build": "npm run build-scss && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
